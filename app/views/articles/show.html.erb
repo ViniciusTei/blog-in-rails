@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* styles need to be inline */
+
+    </style>
+  </head>
+
+  <body>
+    <h1><%= @article.title %></h1>
+
+    <p><%= @article.body %></p>
+
+    <ul>
+      <li> <%= link_to "Edit", edit_article_path(@article) %> </li>
+      <li> <%= link_to "Delete", article_path(@article),
+                method: :delete,
+                data: { confirmL: "Are you sure?"} %> </li>
+    </ul>
+  </body>
+</html>
