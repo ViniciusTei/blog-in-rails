@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+
+  <body>
+    <header class="header">
+        <div>
+            <strong>Rss Feed Viwer</strong>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Página inicial</a></li>
+                    <li><a href="#">Rss parser</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="main-card">
+        <h1>Rss Feed Viwer</h1>
+        <p>Your website to view all your favorites rss feeds.</p>
+    </section>
+    <div class="rss-input">
+        <%= form_with url: "/search", method: :get do |form| %>
+            <%= form.label :rss_query, "Enter the rss feed:" %>
+            <%= form.text_field :rss_query %>
+            <%= form.submit "Search" %>
+        <% end %>
+    </div>
+  </body>
+</html>
