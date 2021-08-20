@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* styles need to be inline */
+
+    </style>
+  </head>
+
+  <body>
+    <h1><%= @podcast.title %></h1>
+
+    <ul>
+       <% @items.each do |item| %>
+            <li>
+                <%= item.title %>
+            </li>
+        <% end %>
+    </ul>
+  </body>
+</html>
